@@ -9,7 +9,8 @@ branding:
   color: "red"
 inputs:
   email:
-  description: true
+  description: The commiter's email address 
+  required: true
   default: ${{ github.actor}}@localhots
 name:
   description: The committer's name
