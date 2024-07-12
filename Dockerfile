@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     python3.10 \
     python3-pip \
     git \
-    && git apt-get clean \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --no-cache-dir PyYAML
