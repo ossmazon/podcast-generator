@@ -1,0 +1,17 @@
+name: "Podcast Generator"
+author: "Sergio Mazon"
+description: "Generates a feed for podcast from a YAML file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+  description: true
+  default: ${{ github.actor}}@localhots
+name:
+  description: The committer's name
+  required:  true
+  default: ${{ github.actor }}
