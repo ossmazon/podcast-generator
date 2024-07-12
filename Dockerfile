@@ -7,11 +7,9 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --upgrade pip
-
-RUN pip3 --version
-
-RUN pip3 install --no-cache-dir --verbose PyYAML
+RUN python3 -m venv /opt/venv
+RUN /opt/venv/bin/pip install --upgrade pip
+RUN /opt/venv/bin/pip install --no-cache-dir PyYAML
 
 COPY feed.py /usr/bin/feed.py
 
